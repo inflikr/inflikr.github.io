@@ -1,0 +1,13 @@
+.logo {
+  background-image: url(logo.gif);
+  background-size: 157px 157px;
+}
+
+.progressBar {
+  background-color: rgb(255, 0, 132);
+}
+
+.watermark {
+  background-image: url(watermark.jpg);
+  background-size: 57px 57px;
+}
