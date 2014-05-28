@@ -78,7 +78,6 @@ body {
   z-index: 100;
 }
 
-
 #googlecast {
   position: absolute;
   left: 102px;
@@ -108,7 +107,7 @@ body {
 
 #likebutton {
   position: absolute;
-  right: 500px;
+  right: 400px;
   bottom: 10px;
 }
 
