@@ -101,13 +101,13 @@ body {
 
 #tweetbutton {
   position: absolute;
-  right: 300px;
+  left: 300px;
   bottom: 10px;
 }
 
 #likebutton {
   position: absolute;
-  right: 430px;
+  left: 430px;
   bottom: 15px;
 }
 
