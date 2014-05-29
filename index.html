@@ -32,14 +32,6 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=641477079200325&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-  
   
 <div id="copyright">
 Designed and written by <a href="http://about.me/emmanuel.boudrant">Emmanuel Boudrant</a>. Copyright 2013-2014, Inflikr Labs.
@@ -118,7 +110,13 @@ if(isAndroid) {
 	window.location = 'market://details?id=kr.infli';
 	
 } else {
-
+var iOS = /(iPhone|iPod)/g.test( navigator.userAgent );
+if(iOS) {
+	$('copyright').style.display='none';
+	$('likebutton').style.display='none';
+	$('tweetbutton').style.display='none';
+	$('gplusone').style.display='none';
+} else {
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/platform.js';
@@ -127,6 +125,14 @@ if(isAndroid) {
   
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=641477079200325&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+}
 }
 </script>
 
