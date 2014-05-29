@@ -71,6 +71,11 @@ body {
   z-index: 100;
 }
 
+a:link {color:#FFFFFF;}      /* unvisited link */
+a:visited {color:#FFFFFF;}  /* visited link */
+a:hover {color:#FFFFFF;}  /* mouse over link */
+a:active {color:#FFFFFF;}  /* selected link */
+
 #googleone {
   position: absolute;
   left: 102px;
@@ -97,6 +102,7 @@ body {
   position: absolute;
   right: 10px;
   font-family: 'Roboto-Thin';
+  font-size: 10px;
   bottom: 10px;
 }
 
