@@ -105,19 +105,24 @@ if (Modernizr.cssanimations &&
   
 var ua = navigator.userAgent.toLowerCase();
 var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-alert(navigator.userAgent );
+
 if(isAndroid) {
   
 	window.location = 'market://details?id=kr.infli';
 	
 } else {
-var iOS = /(iPhone|iPod)/g.test( navigator.userAgent );
-if(iOS) {
+var isiOS = ua.indexOf("iphone") > -1;
+if(isiOS) {
+	alert(navigator.userAgent );
 	$('copyright').style.display='none';
 	$('likebutton').style.display='none';
 	$('tweetbutton').style.display='none';
 	$('gplusone').style.display='none';
 } else {
+	$('copyright').style.display='none';
+	$('likebutton').style.display='none';
+	$('tweetbutton').style.display='none';
+	$('gplusone').style.display='none';
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/platform.js';
