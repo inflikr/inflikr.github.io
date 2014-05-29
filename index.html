@@ -114,15 +114,15 @@ if(isAndroid) {
 var isiOS = ua.indexOf("iphone") > -1;
 if(isiOS) {
 	alert(navigator.userAgent );
-	$('#copyright').style.display='none';
-	$('#likebutton').style.display='none';
-	$('#tweetbutton').style.display='none';
-	$('#gplusone').style.display='none';
+	$('#copyright').hide();
+	$('#likebutton').hide();
+	$('#tweetbutton').hide();
+	$('#gplusone').hide();
 } else {
-	$('#copyright').style.display='none';
-	$('#likebutton').style.display='none';
-	$('#tweetbutton').style.display='none';
-	$('#gplusone').style.display='none';
+	$('#copyright').hide();
+	$('#likebutton').hide();
+	$('#tweetbutton').hide();
+	$('#gplusone').hide();
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/platform.js';
