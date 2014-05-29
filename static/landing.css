@@ -71,13 +71,17 @@ body {
   z-index: 100;
 }
 
+a:link {color:#000000;text-decoration:none;}      /* unvisited link */
+a:visited {color:#000000;text-decoration:none;}  /* visited link */
+a:hover {color:#000000;}  /* mouse over link */
+a:active {color:#000000;text-decoration:none;}  /* selected link */
+
 #googleone {
   position: absolute;
   left: 102px;
   top: 60px;
   z-index: 100;
 }
-
 
 #googlecast {
   position: absolute;
@@ -94,22 +98,30 @@ body {
   z-index: 100;
 }
 
+#copyright {
+  position: absolute;
+  right: 10px;
+  font-family: 'Roboto-Thin';
+  font-size: 15px;
+  bottom: 10px;
+}
+
 #gplusone {
   position: absolute;
-  right: 0px;
+  left: 10px;
   bottom: 10px;
 }
 
 #tweetbutton {
   position: absolute;
-  right: 300px;
+  left: 200px;
   bottom: 10px;
 }
 
 #likebutton {
   position: absolute;
-  right: 500px;
-  bottom: 10px;
+  left: 315px;
+  bottom: 14px;
 }
 
 #playlink {

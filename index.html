@@ -25,11 +25,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="static/modernizr.custom.14469.js"></script>
     <title>Inflikr for Flickr - Android App</title>
+    <meta name="viewport" content="width=690">
     <meta name="description"
           content="Inflikr For Flickr Android - All Flickr in your hand. High quality pictures. Touch based interface. Chromecast ready. Mobile Photo Social Airplay Chromecast">
-    <meta name="viewport" content="width=690">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
 </head>
 <body>
+<div id="fb-root"></div>
+  
+<div id="copyright">
+Designed and written by <a href="http://about.me/emmanuel.boudrant">Emmanuel Boudrant</a>. Copyright 2013-2014, Inflikr Labs.
+</div>  
+
+<div id="likebutton">
+  <div class="fb-like" data-href="https://www.facebook.com/inflikrapp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+</div>
 
 <div id="gplusone">
     <div class="g-plusone" data-href="http://inflikr.co" data-size="medium" data-annotation="inline"
@@ -84,21 +94,60 @@ if (Modernizr.cssanimations &&
 </script>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-39390334-3', 'inflikr.co');
   ga('send', 'pageview');
 
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
+  var ua = navigator.userAgent.toLowerCase();
+  var isAndroid = ua.indexOf("android") > -1;
+  var isiOS = ua.indexOf("iphone") > -1 || ua.indexOf("crios") > -1;
+  if (isAndroid) {
+      window.location = 'market://details?id=kr.infli';
+  } else if (isiOS) {
+      $('#copyright').hide();
+      $('#likebutton').hide();
+      $('#tweetbutton').hide();
+      $('#gplusone').hide();
+  } else {
+      (function () {
+          var po = document.createElement('script');
+          po.type = 'text/javascript';
+          po.async = true;
+          po.src = 'https://apis.google.com/js/platform.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(po, s);
+      })();
 
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      ! function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+          }
+      }(document, "script", "twitter-wjs");
+
+      (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=641477079200325&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  }
 </script>
 
 </body>
