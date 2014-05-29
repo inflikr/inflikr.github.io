@@ -34,7 +34,7 @@
 <div id="fb-root"></div>
   
 <div id="copyright">
-Designed and written by <a href="http://about.me/emmanuel.boudrant">Emmanuel Boudrant</a>. Copyright 2013-2014, Inflikr Labs.
+<span id="copyright_text">Designed and written by <a href="http://about.me/emmanuel.boudrant">Emmanuel Boudrant</a>. Copyright 2013-2014, Inflikr Labs.</span>
 </div>  
 
 <div id="likebutton">
@@ -47,7 +47,7 @@ Designed and written by <a href="http://about.me/emmanuel.boudrant">Emmanuel Bou
     <a href="https://plus.google.com/107527055951065150920" rel="publisher" style="display:none;">Google+</a>
 </div>
 <div id="tweetbutton">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://inflikr.co" data-via="inflikrapp" data-hashtags="flickr,chromecast,android">Tweet</a>
+    <span id="tweetbutton_text"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://inflikr.co" data-via="inflikrapp" data-hashtags="flickr,chromecast,android">Tweet</a></span>
 </div>
 
 <div id="container">
@@ -115,13 +115,17 @@ var isiOS = ua.indexOf("iphone") > -1;
 if(isiOS) {
 	alert(navigator.userAgent );
 	$('copyright').style.display='none';
+	$('copyright_text').style.display='none';
 	$('likebutton').style.display='none';
 	$('tweetbutton').style.display='none';
+	$('tweetbutton_text').style.display='none';
 	$('gplusone').style.display='none';
 } else {
 	$('copyright').style.display='none';
+	$('copyright_text').style.display='none';
 	$('likebutton').style.display='none';
 	$('tweetbutton').style.display='none';
+	$('tweetbutton_text').style.display='none';
 	$('gplusone').style.display='none';
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
