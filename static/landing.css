@@ -71,10 +71,10 @@ body {
   z-index: 100;
 }
 
-a:link {color:#FFFFFF;}      /* unvisited link */
-a:visited {color:#FFFFFF;}  /* visited link */
-a:hover {color:#FFFFFF;}  /* mouse over link */
-a:active {color:#FFFFFF;}  /* selected link */
+a:link {color:#000000;}      /* unvisited link */
+a:visited {color:#000000;}  /* visited link */
+a:hover {color:#000000;}  /* mouse over link */
+a:active {color:#000000;}  /* selected link */
 
 #googleone {
   position: absolute;
@@ -102,7 +102,7 @@ a:active {color:#FFFFFF;}  /* selected link */
   position: absolute;
   right: 10px;
   font-family: 'Roboto-Thin';
-  font-size: 10px;
+  font-size: 15px;
   bottom: 10px;
 }
 
