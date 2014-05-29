@@ -112,6 +112,7 @@ if (Modernizr.cssanimations &&
   var ua = navigator.userAgent.toLowerCase();
   var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
   var isiOS = ua.indexOf("iphone") > -1 || ua.indexOf("crios") > -1;
+  alert(ua)
   if (isAndroid) {
       window.location = 'market://details?id=kr.infli';
   } else if (isiOS) {
