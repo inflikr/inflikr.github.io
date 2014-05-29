@@ -114,13 +114,13 @@ a:active {color:#000000;text-decoration:none;}  /* selected link */
 
 #tweetbutton {
   position: absolute;
-  left: 200px;
+  left: 230px;
   bottom: 10px;
 }
 
 #likebutton {
   position: absolute;
-  left: 315px;
+  left: 345px;
   bottom: 14px;
 }
 
